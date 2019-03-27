@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../config/knexConfig')
+const helmet = require('helmet')
+const cors = require('cors')
+
+router.use(helmet())
+router.use(cors())
 
 router.get('/', async (req, res) => {
   try {
