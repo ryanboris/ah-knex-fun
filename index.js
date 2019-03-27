@@ -11,6 +11,10 @@ app.use(express.json())
 
 app.use('/api/dreams', dreamsRoutes)
 
+app.get('/', (req, res) => {
+  res.send('Hi, check out some data at /api/dreams')
+})
+
 app.listen(process.env.PORT || 5000, () =>
   console.log('<--Server is alive and well on http://127.0.0.1:5000 yasss!')
 )
