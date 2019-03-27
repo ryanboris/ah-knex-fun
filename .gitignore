@@ -1,5 +1,6 @@
 .vscode
-
+data/migrations
+data/migrations/20190326213906_hopes.js
 # Logs
 logs
 *.log
