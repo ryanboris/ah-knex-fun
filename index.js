@@ -2,13 +2,11 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const db = require('./config/knexConfig')
-const hopesRoutes = require('./api/hopesRoutes')
 const dreamsRoutes = require('./api/dreamsRoutes')
 app.use(helmet())
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/hopes', hopesRoutes)
 app.use('/api/dreams', dreamsRoutes)
 
 app.get('/', async (req, res) => {
