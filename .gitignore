@@ -1,15 +1,12 @@
 .vscode
 data/migrations
-data/migrations/20190326213906_hopes.js
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
-data/db.sqlite3
-
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

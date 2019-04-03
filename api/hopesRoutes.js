@@ -9,7 +9,7 @@ router.use(cors())
 
 router.get('/', async (req, res) => {
   try {
-    const result = await db('dreams')
+    const result = await db('hopes')
     res.status(200).json(result)
   } catch (e) {
     console.log(e)
@@ -26,7 +26,7 @@ router.put('/:id', async (req, res) => {
   }
 
   try {
-    const results = await db('dreams')
+    const results = await db('hopes')
       .where({ id })
       .update(body)
 
@@ -42,11 +42,11 @@ router.put('/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const { id } = req.params
   try {
-    const dream = await db('dreams')
+    const hope = await db('hopes')
       .where({ id })
       .first()
-    dream
-      ? res.status(200).json(dream)
+    hope
+      ? res.status(200).json(hope)
       : res.status(404).json({ message: '404 <-> Resource Not Found.' })
   } catch (e) {
     console.error(e)
@@ -62,15 +62,15 @@ router.post('/', async (req, res) => {
         '401 Bad Request - Please provide both a title and description for your dream.'
     })
   } else {
-    const postedDream = await db('dreams').insert({ title, description })
-    res.status(201).json(postedDream)
+    const postedHope = await db('hopes').insert({ title, description })
+    return res.status(201).json(postedHope)
   }
 })
 
 router.delete('/:id', async (req, res) => {
   const { id } = req.params
   try {
-    const deleted = await db('dreams')
+    const deleted = await db('hopes')
       .where({ id })
       .del()
     deleted === 1
