@@ -32,7 +32,7 @@ router.put('/:id', async (req, res) => {
 
     results === 1
       ? res.status(200).json(results)
-      : res.status(404).json({ message: '404' })
+      : res.status(404).json({ message: '404 <--> Not found' })
   } catch (e) {
     console.log(e)
     res.status(500).json({ message: '500 <-> Internal Server Error' })

@@ -1,6 +1,6 @@
 .vscode
 data/migrations
-
+cred.json
 # Logs
 logs
 *.log

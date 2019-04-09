@@ -17,6 +17,9 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
+    "firebase-admin": "^7.2.0",
+    "firebase-functions": "^2.2.1",
     "helmet": "^3.16.0",
     "knex": "^0.16.3",
     "sqlite3": "^4.0.6"
